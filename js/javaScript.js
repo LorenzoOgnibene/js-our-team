@@ -18,6 +18,13 @@ function getNewElement(content){
     return newElement;
 }
 
+function getImgElement(image){
+    const myImg = new Image();
+    myImg.src = image;
+
+    return myImg;
+}
+
 
 
 const containerName = document.getElementById('name');
@@ -61,5 +68,5 @@ for (let i = 0; i < teamMembers.length; i++){
     console.log(teamMembers[i]);
     containerName.appendChild(getNewElement(teamMembers[i].name)); 
     containerPosition.appendChild(getNewElement(teamMembers[i].position));
-    containerImg.appendChild(getNewElement(teamMembers[i].img));    
+    containerImg.appendChild(getNewElement(getImgElement(teamMembers[i].img)));    
 }

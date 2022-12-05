@@ -11,6 +11,18 @@
     Organizzare i singoli membri in card/schede
  */
 
+
+function getNewElement(content){
+    const newElement = document.createElement('div');
+    newElement.innerText = content;
+    return newElement;
+}
+
+
+
+const containerName = document.getElementById('name');
+const containerPosition = document.getElementById('position');
+const containerImg = document.getElementById('img');
 const teamMembers = [
     {
         name : 'Wayne Barnett',
@@ -46,7 +58,8 @@ const teamMembers = [
 
 
 for (let i = 0; i < teamMembers.length; i++){
-    for(key in teamMembers[i]){
-        console.log(teamMembers[i][key]);
-    }
+    console.log(teamMembers[i]);
+    containerName.appendChild(getNewElement(teamMembers[i].name)); 
+    containerPosition.appendChild(getNewElement(teamMembers[i].position));
+    containerImg.appendChild(getNewElement(teamMembers[i].img));    
 }

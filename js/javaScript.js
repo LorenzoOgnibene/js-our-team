@@ -77,7 +77,7 @@
 // }
 
 
-
+//note this function only work with bootstap v5.2 and up.
 function getNewCard (element, img, name, position){
     const myElement = element;
     myElement.innerHTML+= 
@@ -97,7 +97,7 @@ const containerCard = document.getElementById('wrapper');
 const teamMembers = [
     {
         name : 'Wayne Barnett',
-        position : 'Founder & CEO0',
+        position : 'Founder & CEO',
         img : 'wayne-barnett-founder-ceo.jpg'
     },
     {
